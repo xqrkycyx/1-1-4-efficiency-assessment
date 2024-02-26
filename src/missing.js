@@ -81,3 +81,4 @@ function missing2(A) {
   // Return the difference between fullSum and sum (i.e. fullSum - sum)
   return fullSum - sum;
 }
+module.exports = { missing1, missing2 };
