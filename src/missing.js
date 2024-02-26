@@ -53,3 +53,31 @@ function missing1(A) {
 The missing number problem
 Implement algorithm 2 here
 */
+
+// PSEUDOCODE:
+// function missing2
+//   // accepts: A an array of N - 1 numbers
+
+//   declare a variable N and set it equal to the length of A + 1
+//   declare a variable fullSum and set it to the sum of numbers from 1 to N inclusive
+//   declare a variable sum. Find the sum of all numbers in A and store the sum in the variable sm
+//   return the difference between fullSum and sum (i.e. fullSum - sum)
+
+function missing2(A) {
+  // Accepts: A an array of N - 1 numbers
+
+  // Declare a variable N and set it equal to the length of A + 1
+  const N = A.length + 1;
+
+  // Declare a variable fullSum and set it to the sum of numbers from 1 to N inclusive
+  const fullSum = (N * (N + 1)) / 2;
+
+  // Declare a variable sum. Find the sum of all numbers in A and store the sum in the variable sum
+  let sum = 0;
+  for (let i = 0; i < A.length; i++) {
+    sum += A[i];
+  }
+
+  // Return the difference between fullSum and sum (i.e. fullSum - sum)
+  return fullSum - sum;
+}
